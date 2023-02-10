@@ -1,0 +1,148 @@
+@import url(reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+:root {
+  --clr-primary-Moderate-violet: hsl(263, 55%, 52%);
+  --clr-primary-Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --clr-primary-Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --clr-primary-White: hsl(0, 0%, 100%);
+
+  --clr-neutral-Light-gray: hsl(0, 0%, 81%);
+  --clr-neutral-Light-grayish-blue: hsl(210, 46%, 95%);
+
+  --fs-body-copy: 13px;
+
+  --font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+  background-color: var(--clr-neutral-Light-grayish-blue);
+  font-size: var(--fs-body-copy);
+  font-family: var(--font-family);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1.5rem;
+}
+
+/* main */
+.container {
+  max-width: 900px;
+}
+.grid-container {
+  display: grid;
+  place-content: center;
+  justify-content: center;
+  align-content: center;
+
+  gap: 1rem;
+}
+
+/* article */
+.Daniel,
+.Jonathan,
+.Jeanette,
+.Patrick,
+.Kira {
+  border-radius: 0.5rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 1.5rem;
+  overflow: hidden;
+  font-size: 10px;
+}
+.Daniel {
+  background-color: var(--clr-primary-Moderate-violet);
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+.Jonathan {
+  background-color: var(--clr-primary-Very-dark-grayish-blue);
+  grid-column: 3;
+  grid-row: 1;
+}
+.Jeanette {
+  background-color: var(--clr-primary-White);
+  grid-column: 1;
+  grid-row: 2;
+}
+.Patrick {
+  background-color: var(--clr-primary-Very-dark-blackish-blue);
+  grid-column: 2 / span 2;
+  grid-row: 2;
+}
+.Kira {
+  background-color: var(--clr-primary-White);
+  grid-column: 4;
+  grid-row: 1 / span 2;
+}
+
+.card-about {
+  display: flex;
+  gap: 1rem;
+}
+
+.card-about img {
+  height: 2.3rem;
+  width: 2.3rem;
+  border-radius: 50%;
+}
+
+.Daniel .card-about img,
+.Jonathan .card-about img {
+  border: 2px solid var(--clr-primary-White);
+}
+.Patrick .card-about img {
+  border: 2px solid var(--clr-primary-Moderate-violet);
+}
+.Jeanette .card-about img,
+.Kira .card-about img {
+  border: 2px solid var(--clr-primary-Very-dark-grayish-blue);
+}
+
+.Daniel .card-about__name,
+.Jonathan .card-about__name,
+.Patrick .card-about__name {
+  color: var(--clr-primary-White);
+}
+.Daniel .card-about__title,
+.Jonathan .card-about__title,
+.Patrick .card-about__title {
+  color: var(--clr-primary-White);
+}
+.Daniel .card-about__context,
+.Jonathan .card-about__context,
+.Patrick .card-about__context {
+  color: var(--clr-neutral-Light-gray);
+}
+.Jeanette,
+.Kira {
+  color: var(--clr-primary-Very-dark-grayish-blue);
+}
+.card-about__degree {
+  color: var(--clr-neutral-Light-grayish-blue);
+  line-height: 1;
+}
+.card-about__title {
+  margin: 0.5rem 0;
+}
+.card-about__degree {
+  font-size: 10px;
+}
+/* footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 48rem) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
