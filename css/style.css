@@ -148,6 +148,10 @@ body {
 }
 
 @media (max-width: 48rem) {
+  .container {
+    margin: 40rem 0 0;
+  }
+
   .grid-container {
     display: flex;
     flex-direction: column;
