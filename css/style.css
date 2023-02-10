@@ -28,7 +28,7 @@ body {
 
 /* main */
 .container {
-  max-width: 1020px;
+  max-width: 900px;
 }
 .grid-container {
   display: grid;
